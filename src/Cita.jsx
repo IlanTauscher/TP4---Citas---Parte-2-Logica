@@ -1,15 +1,15 @@
 import React from 'react'
 import './Cita.css'
 
-export default function Cita({cita}) {
+export default function Cita({datos}) {
   return (
     <div>
         <div className="cita">
-            <p>Mascota: <span>{cita.mascota}</span></p>
-            <p>Dueño: <span>{cita.propietario}</span></p>
-            <p>Fecha: <span>{cita.fecha}</span></p>
-            <p>Hora: <span>{cita.hora}</span></p>
-            <p>Sintomas: <span>{cita.sintomas}</span></p>
+            <p>Mascota: <span>{datos.mascota}</span></p>
+            <p>Dueño: <span>{datos.propietario}</span></p>
+            <p>Fecha: <span>{datos.fecha}</span></p>
+            <p>Hora: <span>{datos.hora}</span></p>
+            <p>Sintomas: <span>{datos.sintomas}</span></p>
             <button className="button eliminar u-full-width">Eliminar ×</button>
         </div>
     </div>
