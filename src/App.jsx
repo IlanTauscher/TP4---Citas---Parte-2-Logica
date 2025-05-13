@@ -11,7 +11,7 @@ function App() {
       <h1>ADMINISTRADOR DE PACIENTES</h1>
       <div className="row">
         <Formulario datos={datos} setDatos={setDatos}/>
-        <Listado datos={datos}/>
+        <Listado datos={datos} setDatos={setDatos}/>
       </div>
     </div>
   )

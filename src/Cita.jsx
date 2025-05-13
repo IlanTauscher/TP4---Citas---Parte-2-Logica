@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cita.css'
 
-export default function Cita({datos}) {
+export default function Cita({datos, eliminarCita}) {
   return (
     <div>
         <div className="cita">
@@ -10,7 +10,7 @@ export default function Cita({datos}) {
             <p>Fecha: <span>{datos.fecha}</span></p>
             <p>Hora: <span>{datos.hora}</span></p>
             <p>Sintomas: <span>{datos.sintomas}</span></p>
-            <button className="button eliminar u-full-width">Eliminar ×</button>
+            <button className="button eliminar u-full-width" onClick={() => eliminarCita(datos.id)}>Eliminar ×</button>
         </div>
     </div>
   )

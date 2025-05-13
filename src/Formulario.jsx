@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import './Formulario.css'
 
-export default function Formulario({ datos, setDatos }) {
+export default function Formulario({ datos, setDatos}) {
+  const [i, setI] = useState(0);
   const[datosForm, setDatosForm] = useState({ 
     mascota: '',
     propietario: '',
     fecha: '',
     hora: '',
-    sintomas: ''
+    sintomas: '',
+    id: i,
   });
 
   const handleChange = e => {
@@ -25,8 +27,11 @@ export default function Formulario({ datos, setDatos }) {
       propietario: '',
       fecha: '',
       hora: '',
-      sintomas: ''
+      sintomas: '',
+      id: i,
     });
+
+    setI((prev) => prev + 1);
   };
   return (
     <div>
