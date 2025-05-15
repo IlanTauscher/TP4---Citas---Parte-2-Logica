@@ -1,15 +1,19 @@
 {
   "name": "tp4---citas---parte-1",
   "private": true,
+  "homepage": "https://IlanTauscher.github.io/TP4---Citas---Parte-2-Logica",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
