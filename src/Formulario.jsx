@@ -3,14 +3,13 @@ import './Formulario.css'
 
 export default function Formulario({ datos, setDatos}) {
   const error="Hay campos vacios"
-  const [i, setI] = useState(0);
   const[datosForm, setDatosForm] = useState({ 
     mascota: '',
     propietario: '',
     fecha: '',
     hora: '',
     sintomas: '',
-    id: i,
+    id: crypto.randomUUID(),
   });
 
   const handleChange = e => {
@@ -32,11 +31,9 @@ export default function Formulario({ datos, setDatos}) {
       fecha: '',
       hora: '',
       sintomas: '',
-      id: i,
+      id: crypto.randomUUID(),
     });
   
-
-    setI((prev) => prev + 1);
   };
   return (
     <div>
